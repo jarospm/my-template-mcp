@@ -27,8 +27,9 @@ npm run inspect
 # Edit src/index.ts to implement your MCP server
 ```
 
-**What does `--save-exact` do?**
-Replaces `"latest"` in package.json with the exact installed version (e.g., `"1.20.2"`). This ensures consistent builds across environments.
+**Why `--save-exact`?**
+
+Replace `"latest"` in package.json with the exact installed version (e.g., `"1.20.2"`).
 
 ## What's Included
 
@@ -45,7 +46,7 @@ Replaces `"latest"` in package.json with the exact installed version (e.g., `"1.
 
 ## Additional Resources
 
-[MCP Specification](https://modelcontextprotocol.io/specification/versioning)
-[TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk/tree/main)
-[Example Servers](https://github.com/modelcontextprotocol/servers)
-[MCP Inspector](https://github.com/modelcontextprotocol/inspector)
+- [MCP Specification](https://modelcontextprotocol.io/specification/versioning)
+- [TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk/tree/main)
+- [Example Servers](https://github.com/modelcontextprotocol/servers)
+- [MCP Inspector](https://github.com/modelcontextprotocol/inspector)
