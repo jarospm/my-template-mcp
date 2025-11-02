@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import "dotenv/config";  // side-effect import to ensure silent loading
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { createMCPServer } from "./mcpServer.js";
 
