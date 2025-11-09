@@ -25,23 +25,32 @@ npm run inspect
 
 ## Architecture
 
-**Single-file server structure**: The entire MCP server is defined in `src/index.ts` with two main functions:
+**Two-file server structure**: The MCP server is split across two files for better organization:
 
-1. `createServer()` - Configures the MCP server with tools, resources, and prompts
-2. `main()` - Sets up stdio transport and connects the server
+1. **[src/index.ts](src/index.ts)** - Entry point that:
+   - Initializes any services needed by the server
+   - Creates the MCP server via `createMCPServer()`
+   - Sets up stdio transport and connects the server
+   - Contains the `main()` function
+
+2. **[src/mcpServer.ts](src/mcpServer.ts)** - Server configuration that:
+   - Exports `createMCPServer()` function
+   - Registers all tools, resources, and prompts
+   - Returns the configured `McpServer` instance
 
 **Transport**: Uses stdio (standard input/output) for communication, which is the standard for MCP servers used with Claude Desktop.
 
 **Registration pattern**: Tools, resources, and prompts are registered by calling methods on the `McpServer` instance:
-- `server.tool(name, description, inputSchema, handler)`
-- `server.resource(name, template, metadata, handler)`
-- `server.prompt(name, description, argsSchema, handler)`
+- `server.registerTool(name, options, handler)`
+- `server.registerResource(name, template, metadata, handler)`
+- `server.registerPrompt(name, options, handler)`
 
 ## MCP Documentation
 
-When working with MCP concepts or the TypeScript SDK, reference these files:
-- `docs/mcp-typescript-sdk.txt` - Official MCP TypeScript SDK documentation and API reference
-- `docs/mcp-docs.txt` - Full MCP specification and protocol documentation
+When working with MCP concepts or the TypeScript SDK, fetch the latest documentation from:
+- https://modelcontextprotocol.io/llms.txt - LLM-optimized MCP overview
+- https://modelcontextprotocol.io/llms-full.txt - Complete MCP specification
+- https://github.com/modelcontextprotocol/typescript-sdk/blob/main/README.md - Official TypeScript SDK documentation and API reference
 
 ## Template Strategy
 

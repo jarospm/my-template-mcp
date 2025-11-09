@@ -46,7 +46,7 @@ Replace `"latest"` in package.json with the exact installed version (e.g., `"1.2
 
 ## Additional Resources
 
-- [MCP Specification](https://modelcontextprotocol.io/specification/versioning)
+- [MCP Documentation](https://modelcontextprotocol.io/docs/)
 - [TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk/tree/main)
 - [Example Servers](https://github.com/modelcontextprotocol/servers)
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector)
